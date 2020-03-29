@@ -120,15 +120,15 @@ class InterpolationMethods:
 
         if last_position is None:
             tao_1 = None
-            tao_2 = self._x_term[next_position]
+            tao_2 = float(self._x_term[next_position])
             rate_2 = self._y_rate[next_position]
         elif next_position is None:
-            tao_1 = self._x_term[last_position]
+            tao_1 = float(self._x_term[last_position])
             tao_2 = None
             rate_1 = self._y_rate[last_position]
         else:
-            tao_1 = self._x_term[last_position]
-            tao_2 = self._x_term[next_position]
+            tao_1 = float(self._x_term[last_position])
+            tao_2 = float(self._x_term[next_position])
             rate_1 = self._y_rate[last_position]
             rate_2 = self._y_rate[next_position]
 
@@ -194,7 +194,6 @@ class InterestRateCurve(Bond,InterpolationMethods):
     
     
 class CalibrateCurve(InterestRateCurve, Bond, InterpolationMethods):
-    
     def __init__(self,
                  maturities: list = [],
                  vec_rates: list = [],
