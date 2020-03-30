@@ -122,6 +122,7 @@ class IRSwap(IRSCurveCalibration):
             term {float} -- Term of  the swap in years, ej 6 months is 0.5.
             date_val {datetime.date} -- Date of pricing. 
             date_end {datetime.date} -- Date when the swap expirces. 
+        # Return: The price of the swap.
         """   
         
         if self._term > 2:
