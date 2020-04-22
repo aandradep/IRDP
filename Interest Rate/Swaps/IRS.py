@@ -8,6 +8,7 @@ sys.path.append('D:/Documents/IRDP/Interest Rate')
 from Bonds.bonds import InterpolationMethods
 
 class IRSCurveCalibration:
+    
     def __init__(self,
                  date_val: datetime.date = datetime.date(2002, 12, 31),
                  swaps_rates: list = [],

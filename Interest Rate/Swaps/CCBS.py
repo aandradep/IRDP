@@ -84,10 +84,10 @@ class BasisSwapPractitioners(InterpolationMethods):
         denominator = 1+coupon*deltas[::-1][0]
         rate = -np.log(numerator/denominator)/term
         
-        return(rate)
+        return rate
         
 class BasisSwap(InterpolationMethods):
-    """Calibrates a basis swap curve as practitioners do."""
+    """Calibrates a basis swap curve."""
     
     def __init__(self,
                  terms: np.array,
